@@ -1,9 +1,22 @@
 import React, {Component} from 'react'
-import {View, Text} from 'react-native';
-import {getMetricMetaInfo} from "../utils/helpers";
+import {View, Text, TouchableOpacity, Slider} from 'react-native';
+import {getMetricMetaInfo, timeToString} from "../utils/helpers";
 import UdaciSlider from './UdaciSlider';
 import UdaciStepper from './UdaciStepper';
 import DateHeader from './DateHeader';
+
+
+function SubmitBtn({onPress}) {
+    return (
+        <TouchableOpacity
+            onPress={onPress}
+        >
+            <Text>
+                Submit
+            </Text>
+        </TouchableOpacity>
+    )
+}
 
 export default class AddEntry extends Component {
 
@@ -12,11 +25,12 @@ export default class AddEntry extends Component {
         bike:0,
         swim:0,
         sleep:0,
-        eat:0
+        eat:0,
+        value:0
     };
 
     increment = (metric) => {
-        const {max, step} = getMetricMetaInfo();
+        const {max, step} = getMetricMetaInfo(metric);
 
         this.setState((preState) => {
             const count  = preState[metric] + step;
@@ -43,6 +57,20 @@ export default class AddEntry extends Component {
         this.setState(() => ({
             [metric]: value,
         }))
+    };
+
+    submit = () => {
+        const key = timeToString();
+        const entry = this.state;
+
+        this.setState(() => ({
+            run:0,
+            bike:0,
+            swim:0,
+            sleep:0,
+            eat:0
+        }))
+
     };
 
     render() {
@@ -74,6 +102,20 @@ export default class AddEntry extends Component {
                     )
 
                 })}
+                <SubmitBtn onPress={this.submit}/>
+                <Slider
+                    minimumValue={-10}
+                    maximumValue={10}
+                    step={1}
+                    value={this.state.value}
+                    onValueChange={(value) => this.setState((prvState)=>({
+                        ...prvState,
+                        value: value
+                    }))}
+                />
+                <Text>
+                    Value: {this.state.value}
+                </Text>
             </View>
         )
     }
