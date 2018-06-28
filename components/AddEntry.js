@@ -6,6 +6,7 @@ import UdaciStepper from './UdaciStepper';
 import DateHeader from './DateHeader';
 import TextButton from './TextButton';
 import {Ionicons} from '@expo/vector-icons';
+import {submitEntry, removeEntry} from "../utils/api";
 
 
 function SubmitBtn({onPress}) {
@@ -33,7 +34,10 @@ export default class AddEntry extends Component {
 
     reset = () => {
         const key = timeToString();
-    }
+
+        // Remove entry from DB
+        removeEntry(key);
+    };
 
     increment = (metric) => {
         const {max, step} = getMetricMetaInfo(metric);
@@ -75,7 +79,10 @@ export default class AddEntry extends Component {
             swim:0,
             sleep:0,
             eat:0
-        }))
+        }));
+
+        // Adding entry to DB
+        submitEntry({key, entry});
 
     };
 

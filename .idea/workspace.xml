@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0361158a-597d-4f77-895d-e1a9eddf3434" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/components/TextButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/AddEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AddEntry.js" afterDir="false" />
     </list>
@@ -24,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddEntry.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddEntry.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/AddEntry.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="22">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -36,35 +38,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextButton.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/TextButton.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/actions/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UdaciStepper.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/UdaciStepper.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/reducers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UdaciSlider.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/UdaciSlider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -91,7 +78,10 @@
         <option value="$PROJECT_DIR$/components/UdaciSlider.js" />
         <option value="$PROJECT_DIR$/components/UdaciStepper.js" />
         <option value="$PROJECT_DIR$/components/TextButton.js" />
+        <option value="$PROJECT_DIR$/utils/api.js" />
         <option value="$PROJECT_DIR$/components/AddEntry.js" />
+        <option value="$PROJECT_DIR$/actions/index.js" />
+        <option value="$PROJECT_DIR$/reducers/index.js" />
       </list>
     </option>
   </component>
@@ -134,7 +124,12 @@
             <path>
               <item name="react-nanodegree-reactNative" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-nanodegree-reactNative" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-nanodegree-reactNative" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-nanodegree-reactNative" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -184,7 +179,7 @@
       <workItem from="1529874348022" duration="20000" />
       <workItem from="1529874449173" duration="13000" />
       <workItem from="1529874927015" duration="7002000" />
-      <workItem from="1530055749438" duration="3225000" />
+      <workItem from="1530055749438" duration="4785000" />
     </task>
     <task id="LOCAL-00001" summary="Building UI of components Stepper and Slider">
       <created>1530058133101</created>
@@ -193,11 +188,18 @@
       <option name="project" value="LOCAL" />
       <updated>1530058133101</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Building UI for data logged state">
+      <created>1530144003132</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1530144003133</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12952000" />
+    <option name="totallyTimeSpent" value="14512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-257" width="1920" height="1011" extended-state="0" />
@@ -230,7 +232,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Building UI of components Stepper and Slider" />
-    <option name="LAST_COMMIT_MESSAGE" value="Building UI of components Stepper and Slider" />
+    <MESSAGE value="Building UI for data logged state" />
+    <option name="LAST_COMMIT_MESSAGE" value="Building UI for data logged state" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/App.js">
@@ -338,13 +341,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/components/AddEntry.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="22">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
