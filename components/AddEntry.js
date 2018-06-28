@@ -4,6 +4,8 @@ import {getMetricMetaInfo, timeToString} from "../utils/helpers";
 import UdaciSlider from './UdaciSlider';
 import UdaciStepper from './UdaciStepper';
 import DateHeader from './DateHeader';
+import TextButton from './TextButton';
+import {Ionicons} from '@expo/vector-icons';
 
 
 function SubmitBtn({onPress}) {
@@ -28,6 +30,10 @@ export default class AddEntry extends Component {
         eat:0,
         value:0
     };
+
+    reset = () => {
+        const key = timeToString();
+    }
 
     increment = (metric) => {
         const {max, step} = getMetricMetaInfo(metric);
@@ -73,8 +79,25 @@ export default class AddEntry extends Component {
 
     };
 
+
     render() {
         const metaInfo = getMetricMetaInfo();
+
+        if(this.props.alreadyLogged) {
+            return (
+                <View>
+                    <Ionicons
+                        name='ios-happy-outline'
+                        size={100}
+                    />
+                    <Text>You have already logged your information from today</Text>
+                    <TextButton onPress={this.reset}>
+                        Reset
+                    </TextButton>
+                </View>
+            )
+        }
+
         return (
             <View>
                 <DateHeader date={(new Date()).toLocaleDateString()}/>
