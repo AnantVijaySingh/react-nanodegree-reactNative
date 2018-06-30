@@ -160,6 +160,7 @@ class AddEntry extends Component {
                 <Text>
                     Value: {this.state.value}
                 </Text>
+
             </View>
         )
     }
