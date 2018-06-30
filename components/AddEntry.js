@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, Text, TouchableOpacity, Slider, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity, Slider, StyleSheet, Platform} from 'react-native';
 import {getMetricMetaInfo, timeToString, getDailyReminderValue} from "../utils/helpers";
 import UdaciSlider from './UdaciSlider';
 import UdaciStepper from './UdaciStepper';
@@ -9,14 +9,16 @@ import {Ionicons} from '@expo/vector-icons';
 import {submitEntry, removeEntry} from "../utils/api";
 import {connect} from 'react-redux';
 import {addEntry} from "../actions";
+import {white, purple} from '../utils/colors';
 
 
 function SubmitBtn({onPress}) {
     return (
         <TouchableOpacity
             onPress={onPress}
+            style={Platform.OS === 'ios' ? styles.iosSubmitBtn : styles.androidSubmitBtn}
         >
-            <Text>
+            <Text style={styles.submitBtnText}>
                 Submit
             </Text>
         </TouchableOpacity>
@@ -106,9 +108,9 @@ class AddEntry extends Component {
 
         if(this.props.alreadyLogged) {
             return (
-                <View>
+                <View style={styles.center}>
                     <Ionicons
-                        name='ios-happy-outline'
+                        name={Platform.OS === 'ios' ? 'ios-happy-outline' : 'md-happy'}
                         size={100}
                     />
                     <Text>You have already logged your information from today</Text>
@@ -120,51 +122,80 @@ class AddEntry extends Component {
         }
 
         return (
-            <View>
+            <View style={styles.container}>
                 <DateHeader date={(new Date()).toLocaleDateString()}/>
                 {Object.keys(metaInfo).map((key) => {
-                    const{getIcon, type, ...rest} = metaInfo[key];
+                    const {getIcon, type, ...rest} = metaInfo[key];
                     const value = this.state[key];
 
                     return (
-                        <View key={key}>
+                        <View key={key} style={styles.row}>
                             {getIcon()}
                             {type === 'slider'
-                            ? <UdaciSlider
-                                value={value}
-                                onChange={(value) => this.slide(key,value)}
-                                {...rest}
+                                ? <UdaciSlider
+                                    value={value}
+                                    onChange={(value) => this.slide(key,value)}
+                                    {...rest}
                                 />
-                            : <UdaciStepper
+                                : <UdaciStepper
                                     value={value}
                                     onIncrement={() => this.increment(key)}
                                     onDecrement={() => this.decrement(key)}
                                     {...rest}
-                                />
-                            }
+                                />}
                         </View>
                     )
-
                 })}
                 <SubmitBtn onPress={this.submit}/>
-                <Slider
-                    minimumValue={-10}
-                    maximumValue={10}
-                    step={1}
-                    value={this.state.value}
-                    onValueChange={(value) => this.setState((prvState)=>({
-                        ...prvState,
-                        value: value
-                    }))}
-                />
-                <Text>
-                    Value: {this.state.value}
-                </Text>
-
             </View>
         )
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 20,
+        backgroundColor: white
+    },
+    row: {
+        flexDirection: 'row',
+        flex: 1,
+        alignItems: 'center',
+    },
+    iosSubmitBtn: {
+        backgroundColor: purple,
+        padding: 10,
+        borderRadius: 7,
+        height: 45,
+        marginLeft: 40,
+        marginRight: 40
+    },
+    androidSubmitBtn: {
+        backgroundColor: purple,
+        padding: 10,
+        borderRadius: 2,
+        height: 45,
+        paddingLeft: 30,
+        paddingRight: 30,
+        alignSelf: 'center',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    submitBtnText:{
+        textAlign: 'center',
+        fontSize: 22,
+        color: white,
+    },
+    center: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: 20,
+        marginRight: 20
+    }
+});
+
 
 function mapStateToProps(state) {
     const key = timeToString();
