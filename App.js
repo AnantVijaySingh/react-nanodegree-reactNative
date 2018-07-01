@@ -6,6 +6,7 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import reducer from './reducers';
 import middleware from './middleware';
+import History from './components/History';
 
 const store = createStore(reducer, middleware);
 
@@ -20,7 +21,7 @@ export default class App extends React.Component {
         return (
             <Provider store={store}>
                 <View style={{flex: 1}}>
-                    <AddEntry/>
+                    <History/>
                 </View>
             </Provider>
         );
