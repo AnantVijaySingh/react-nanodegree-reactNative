@@ -9,19 +9,21 @@ export default function MetricCard({date, metrics}) {
         <View>
             {date && <DateHeader date={date}/>}
             {Object.keys(metrics).map((metric) => {
-                const {displayName, unit, getIcon} = getMetricMetaInfo(metric);
+                if (getMetricMetaInfo(metric) !== undefined) {
+                    const {displayName, unit, getIcon} = getMetricMetaInfo(metric);
 
-                return (
-                    <View style={styles.metric} key={metric}>
-                        {getIcon()}
-                        <View>
-                            <Text style={{fontSize: 20}}>{displayName}</Text>
-                            <Text style={{fontSize: 16, color: gray }}>
-                                {metrics[metric]}{unit}
-                            </Text>
+                    return (
+                        <View style={styles.metric} key={metric}>
+                            {getIcon()}
+                            <View>
+                                <Text style={{fontSize: 20}}>{displayName}</Text>
+                                <Text style={{fontSize: 16, color: gray }}>
+                                    {metrics[metric]}{unit}
+                                </Text>
+                            </View>
                         </View>
-                    </View>
-                )
+                    )
+                }
             })}
         </View>
     )
