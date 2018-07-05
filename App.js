@@ -7,9 +7,10 @@ import {Provider} from 'react-redux';
 import reducer from './reducers';
 import middleware from './middleware';
 import History from './components/History';
-import {createBottomTabNavigator, createMaterialTopTabNavigator} from 'react-navigation';
+import {createBottomTabNavigator, createMaterialTopTabNavigator, createStackNavigator} from 'react-navigation';
 import {purple, white} from "./utils/colors";
 import {Constants} from 'expo';
+import EntryDetail from './components/EntryDetail';
 
 const store = createStore(reducer, middleware);
 
@@ -85,6 +86,24 @@ const TabsAndroid = createMaterialTopTabNavigator({
         }
     });
 
+const MainNavigator = createStackNavigator({
+    Home: {
+        screen: Platform.OS === 'ios' ? TabsiOS : TabsAndroid,
+        navigationOptions: {
+            header: null, // need to set this for createTabNavigator function
+        }
+    },
+    EntryDetail: {
+        screen: EntryDetail,
+        navigationOptions: {
+            headerTintColor: white,
+            headerStyle: {
+                backgroundColor: purple
+            }
+        }
+    }
+});
+
 export default class App extends React.Component {
 
     componentDidMount () {
@@ -97,11 +116,7 @@ export default class App extends React.Component {
             <Provider store={store}>
                 <View style={{flex: 1}}>
                     <UdaciStatusBar backgroundColor={purple} barStyle='light-content'/>
-                    {
-                        Platform.OS === 'ios'
-                        ? <TabsiOS />
-                            : <TabsAndroid/>
-                    }
+                    <MainNavigator/>
                 </View>
             </Provider>
         );

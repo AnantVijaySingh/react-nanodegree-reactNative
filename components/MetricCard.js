@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import DateHeader from './DateHeader';
 import {getMetricMetaInfo} from "../utils/helpers";
-import {gray} from "../utils/colors";
+import {gray, white} from "../utils/colors";
 
 export default function MetricCard({date, metrics}) {
     return (
@@ -18,7 +18,7 @@ export default function MetricCard({date, metrics}) {
                             <View>
                                 <Text style={{fontSize: 20}}>{displayName}</Text>
                                 <Text style={{fontSize: 16, color: gray }}>
-                                    {metrics[metric]}{unit}
+                                    {metrics[metric]} {unit}
                                 </Text>
                             </View>
                         </View>
