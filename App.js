@@ -7,10 +7,11 @@ import {Provider} from 'react-redux';
 import reducer from './reducers';
 import middleware from './middleware';
 import History from './components/History';
-import {createBottomTabNavigator, createMaterialTopTabNavigator, createStackNavigator} from 'react-navigation';
+import {createBottomTabNavigator, createMaterialTopTabNavigator, createStackNavigator, createDrawerNavigator} from 'react-navigation';
 import {purple, white} from "./utils/colors";
 import {Constants} from 'expo';
 import EntryDetail from './components/EntryDetail';
+import Live from './components/Live';
 
 const store = createStore(reducer, middleware);
 
@@ -37,6 +38,13 @@ const TabsiOS = createBottomTabNavigator({
             tabBarIcon: ({tintColor}) => <FontAwesome name='plus-square' size={30} color={tintColor} />
         }
     },
+    Live : {
+        screen: Live,
+        navigationOptions: {
+            tabBarLable: 'Live',
+            tabBarIcon: ({tintColor}) => <Ionicons name='ios-speedometer' size={30} color={tintColor} />
+        }
+    }
 },
     {   navigationOptions: {
             header: null,
@@ -69,6 +77,13 @@ const TabsAndroid = createMaterialTopTabNavigator({
                 tabBarIcon: ({tintColor}) => <FontAwesome name='plus-square' size={30} color={tintColor} />
             }
         },
+        Live : {
+            screen: Live,
+            navigationOptions: {
+                tabBarLable: 'Live',
+                tabBarIcon: ({tintColor}) => <FontAwesome name='compass' size={30} color={tintColor} />
+            }
+        }
     },
     {   navigationOptions: {
             header: null,

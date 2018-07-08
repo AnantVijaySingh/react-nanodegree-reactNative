@@ -10,6 +10,7 @@ import {submitEntry, removeEntry} from "../utils/api";
 import {connect} from 'react-redux';
 import {addEntry} from "../actions";
 import {white, purple} from '../utils/colors';
+import {NavigationActions} from 'react-navigation'
 
 
 function SubmitBtn({onPress}) {
@@ -43,10 +44,18 @@ class AddEntry extends Component {
         this.props.dispatch(addEntry({
             [key]:getDailyReminderValue(),
         }));
+
+        this.toHome();
+
         // Remove entry from DB
         removeEntry(key);
     };
 
+    toHome = () => {
+        this.props.navigation.dispatch(NavigationActions.back({
+            key: 'AddEntry'
+        }))
+    };
 
     increment = (metric) => {
         const {max, step} = getMetricMetaInfo(metric);
@@ -96,6 +105,8 @@ class AddEntry extends Component {
             sleep:0,
             eat:0
         }));
+
+        this.toHome();
 
         // Adding entry to DB
         submitEntry({key, entry});
