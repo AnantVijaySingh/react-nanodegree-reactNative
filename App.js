@@ -13,6 +13,7 @@ import {Constants} from 'expo';
 import EntryDetail from './components/EntryDetail';
 import Live from './components/Live';
 import {setLocalNotifications} from "./utils/helpers";
+import ImageMode from './components/ImageMode'
 
 const store = createStore(reducer, middleware);
 
@@ -28,22 +29,29 @@ const TabsiOS = createBottomTabNavigator({
     History:{
         screen: History,
         navigationOptions: {
-            tabBarLable: 'History',
+            tabBarLabel: 'History',
             tabBarIcon: ({tintColor}) => <Ionicons name='ios-bookmarks' size={30}  color={tintColor}/>
         }
     },
     AddEntry: {
         screen: AddEntry,
         navigationOptions: {
-            tabBarLable: 'Add Entry',
-            tabBarIcon: ({tintColor}) => <FontAwesome name='plus-square' size={30} color={tintColor} />
+            tabBarLabel: 'Add Entry',
+            tabBarIcon: ({ tintColor }) => <FontAwesome name='plus-square' size={30} color={tintColor} />
         }
     },
     Live : {
         screen: Live,
         navigationOptions: {
-            tabBarLable: 'Live',
+            tabBarLabel: 'Live',
             tabBarIcon: ({tintColor}) => <Ionicons name='ios-speedometer' size={30} color={tintColor} />
+        }
+    },
+    ImageMode : {
+        screen: ImageMode,
+        navigationOptions: {
+            tabBarLabel: 'Image',
+            tabBarIcon: ({tintColor}) => <Ionicons name='ios-image' size={30} color={tintColor} />
         }
     }
 },
@@ -67,22 +75,29 @@ const TabsAndroid = createMaterialTopTabNavigator({
         History:{
             screen: History,
             navigationOptions: {
-                tabBarLable: 'History',
+                tabBarLabel: 'History',
                 tabBarIcon: ({tintColor}) => <Ionicons name='ios-bookmarks' size={30}  color={tintColor}/>
             }
         },
         AddEntry: {
             screen: AddEntry,
             navigationOptions: {
-                tabBarLable: 'Add Entry',
+                tabBarLabel: 'Add Entry',
                 tabBarIcon: ({tintColor}) => <FontAwesome name='plus-square' size={30} color={tintColor} />
             }
         },
         Live : {
             screen: Live,
             navigationOptions: {
-                tabBarLable: 'Live',
+                tabBarLabel: 'Live',
                 tabBarIcon: ({tintColor}) => <FontAwesome name='compass' size={30} color={tintColor} />
+            }
+        },
+        ImageMode : {
+            screen: ImageMode,
+            navigationOptions: {
+                tabBarLabel: 'Image',
+                tabBarIcon: ({tintColor}) => <FontAwesome name='image' size={30} color={tintColor} />
             }
         }
     },
