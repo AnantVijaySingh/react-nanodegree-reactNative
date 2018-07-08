@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0361158a-597d-4f77-895d-e1a9eddf3434" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/components/Live.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/AddEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AddEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,19 +19,34 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="55" lean-forward="true" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="55" />
+            <state relative-caret-position="1935">
+              <caret line="129" column="32" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Live.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/Live.js">
+      <file leaf-file-name="helpers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/helpers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="101" column="70" lean-forward="true" selection-start-line="101" selection-start-column="70" selection-end-line="101" selection-end-column="70" />
+            <state relative-caret-position="1361">
+              <caret line="194" column="25" lean-forward="true" selection-start-line="194" selection-start-column="25" selection-end-line="194" selection-end-column="25" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#21#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddEntry.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/components/AddEntry.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="101" column="18" lean-forward="true" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,14 +78,14 @@
         <option value="$PROJECT_DIR$/components/TextButton.js" />
         <option value="$PROJECT_DIR$/components/His.js" />
         <option value="$PROJECT_DIR$/utils/_calendar.js" />
-        <option value="$PROJECT_DIR$/utils/helpers.js" />
         <option value="$PROJECT_DIR$/utils/api.js" />
         <option value="$PROJECT_DIR$/components/History.js" />
         <option value="$PROJECT_DIR$/components/MetricCard.js" />
         <option value="$PROJECT_DIR$/components/EntryDetail.js" />
-        <option value="$PROJECT_DIR$/components/AddEntry.js" />
-        <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/components/Live.js" />
+        <option value="$PROJECT_DIR$/utils/helpers.js" />
+        <option value="$PROJECT_DIR$/App.js" />
+        <option value="$PROJECT_DIR$/components/AddEntry.js" />
       </list>
     </option>
   </component>
@@ -113,17 +128,7 @@
             <path>
               <item name="react-nanodegree-reactNative" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-nanodegree-reactNative" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-nanodegree-reactNative" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-nanodegree-reactNative" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-nanodegree-reactNative" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-nanodegree-reactNative" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-nanodegree-reactNative" type="b2602c69:ProjectViewProjectNode" />
@@ -187,7 +192,7 @@
       <workItem from="1529874449173" duration="13000" />
       <workItem from="1529874927015" duration="7002000" />
       <workItem from="1530055749438" duration="11228000" />
-      <workItem from="1530399417324" duration="27542000" />
+      <workItem from="1530399417324" duration="30576000" />
     </task>
     <task id="LOCAL-00001" summary="Building UI of components Stepper and Slider">
       <created>1530058133101</created>
@@ -259,11 +264,25 @@
       <option name="project" value="LOCAL" />
       <updated>1530749440786</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Native APIs: GeoLocation within component Live&#10;---&gt; Location, Permissions from expo&#10;- Permissions.getAsync&#10;- Permissions.askAsync&#10;- Location.watchPositionAsync / getCurrentPositionAsync">
+      <created>1531009375950</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1531009375950</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Animations: Animated from react-native&#10;decay, timing, spring">
+      <created>1531073110697</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1531073110697</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48497000" />
+    <option name="totallyTimeSpent" value="51531000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-257" width="1920" height="1057" extended-state="6" />
@@ -305,7 +324,10 @@
     <MESSAGE value="Metric Card Component&#10;Issue: AsyncStorage does not set the state by default needs to be passed default once to get it going." />
     <MESSAGE value="- Metric Card Component Issue on Android Resolved&#10;- createMaterialTopTabNavigator and createBottomTabManager for Android and iOS&#10;- StatusBar component" />
     <MESSAGE value="createStackNavigation component&#10;EntryDetails component: using shouldComponentUpdate to add a check based on nextProps to halt component re-rendering" />
-    <option name="LAST_COMMIT_MESSAGE" value="createStackNavigation component&#10;EntryDetails component: using shouldComponentUpdate to add a check based on nextProps to halt component re-rendering" />
+    <MESSAGE value="Native APIs: GeoLocation&#10;---&gt; Location, Permissions from expo&#10;- Permissions.getAsync&#10;- Permissions.askAsync&#10;- Location.watchPositionAsync / getCurrentPositionAsync" />
+    <MESSAGE value="Native APIs: GeoLocation within component Live&#10;---&gt; Location, Permissions from expo&#10;- Permissions.getAsync&#10;- Permissions.askAsync&#10;- Location.watchPositionAsync / getCurrentPositionAsync" />
+    <MESSAGE value="Animations: Animated from react-native&#10;decay, timing, spring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Animations: Animated from react-native&#10;decay, timing, spring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -510,16 +532,6 @@
     <entry file="file://$PROJECT_DIR$/utils/colors.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2055">
-          <caret line="137" column="23" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="23" />
-          <folding>
-            <element signature="e#21#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/_calendar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -584,16 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/AddEntry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/History.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
@@ -604,19 +606,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App.js">
+    <entry file="file://$PROJECT_DIR$/components/Live.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="55" lean-forward="true" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="55" />
+        <state relative-caret-position="60">
+          <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/Live.js">
+    <entry file="file://$PROJECT_DIR$/utils/helpers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="101" column="70" lean-forward="true" selection-start-line="101" selection-start-column="70" selection-end-line="101" selection-end-column="70" />
+        <state relative-caret-position="1361">
+          <caret line="194" column="25" lean-forward="true" selection-start-line="194" selection-start-column="25" selection-end-line="194" selection-end-column="25" />
+          <folding>
+            <element signature="e#21#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="129" column="32" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="32" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/AddEntry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="101" column="18" lean-forward="true" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

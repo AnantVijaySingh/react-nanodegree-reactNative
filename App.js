@@ -12,6 +12,7 @@ import {purple, white} from "./utils/colors";
 import {Constants} from 'expo';
 import EntryDetail from './components/EntryDetail';
 import Live from './components/Live';
+import {setLocalNotifications} from "./utils/helpers";
 
 const store = createStore(reducer, middleware);
 
@@ -125,6 +126,8 @@ export default class App extends React.Component {
         console.log('before');
         // debugger;
         console.log('after');
+
+        setLocalNotifications();
     }
     render() {
         return (

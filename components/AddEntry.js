@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {View, Text, TouchableOpacity, Slider, StyleSheet, Platform} from 'react-native';
-import {getMetricMetaInfo, timeToString, getDailyReminderValue} from "../utils/helpers";
+import {getMetricMetaInfo, timeToString, getDailyReminderValue, clearLocalNotifications, setLocalNotifications} from "../utils/helpers";
 import UdaciSlider from './UdaciSlider';
 import UdaciStepper from './UdaciStepper';
 import DateHeader from './DateHeader';
@@ -110,6 +110,10 @@ class AddEntry extends Component {
 
         // Adding entry to DB
         submitEntry({key, entry});
+
+        // Set notifications
+        clearLocalNotifications()
+            .then(setLocalNotifications)
 
     };
 
