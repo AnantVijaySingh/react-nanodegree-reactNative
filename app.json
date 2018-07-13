@@ -2,7 +2,7 @@
   "expo": {
     "sdkVersion": "27.0.0",
     "orientation": "portrait",
-    "name": "Udacifitness",
+    "name": "Triathlon",
     "description": "The best triathlon training app in the world.",
     "slug": "udacifitness",
     "version": "1.0",
@@ -11,10 +11,10 @@
       "icon": "http://www.student-scholarships.com/images/made/img/featured/nav_basketball_45_45.png"
     },
     "ios": {
-      "bundleIdentifier": "org.udacifitness.exp",
+      "bundleIdentifier": "org.udacifitness.exp"
     },
     "android": {
-      "package": "org.udacifitness.exp",
+      "package": "org.udacifitness.exp"
     }
   },
 }
